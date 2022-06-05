@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/eventstyle.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href=""><h1>PuddingFest</h1></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+               <li><a href="/home.html">home</a></li>
+               <li><a href="#">events</a></li>
+            </ul>
+            <button><a href="/contact.html">contact us</a></button>
+        </nav>
+    </header>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="/asset/sepaker1.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+  
+        <div class="mySlides fade">
+            <img src="/asset/speaker2.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+  
+        <div class="mySlides fade">
+            <img src="/asset/speaker3.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+  
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- <div style="text-align:center" id="carouseldot">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div> -->
+    <div id="events">
+        <h1>Events</h1>
+        <div class="container">
+            <div class="box">
+                <h1>Tech Exhibition</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="box">
+                <h1>Tech Conference</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+    <div id="timeline">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <div id="form">
+        <h1>Registration Form</h1>
+        <form action="" method="post">
+            <div class="registration">
+                <label for="email">E-mail</label><br>
+                <input type="text" name="Email" id="email" required>
+            </div>
+            <div class="registration">
+                <label for="nama">Name</label><br>
+                <input type="text" name="Name" id="nama" required>
+            </div>
+            <div class="registration">
+                <label for="tlp">Phone Number</label><br>
+                <input type="text" name="Phone" id="tlp" maxlength="14" required>
+            </div>
+            <div class="registration">
+                <label for="list-event">List of Events</label><br>
+                <select name="Event" id="list-event">
+                    <optgroup label="Tech Exhibition">
+                        <option value="event1">Exhibition : Day 1</option>
+                        <option value="event2">Exhibition : Day 2</option>
+                        <option value="event3">Exhibition : Day 3</option>
+                        <option value="event4">Exhibition : All Day Pass</option>
+                    </optgroup>
+                    <optgroup label="Tech Conference">
+                        <option value="con1">Conference : Topic 1</option>
+                        <option value="con2">Conference : Topic 2</option>
+                        <option value="con3">Conference : Topic 3</option>
+                        <option value="con4">Conference : All Topic</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="registration1">
+                <input type="submit" value="Submit" onclick="newPostRef">
+            </div>
+        </form>
+    </div>
+
+    <script src="/eventsytem.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script type="module">
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCIRRkic1DmSdVd2Mu51fVascg0nHLkIIk",
+          authDomain: "puddingfest-final.firebaseapp.com",
+          projectId: "puddingfest-final",
+          storageBucket: "puddingfest-final.appspot.com",
+          messagingSenderId: "736303376589",
+          appId: "1:736303376589:web:9c9c3d371c2104cbe8a184",
+          measurementId: "G-G36XJ69W3Z"
+        };
+      
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        // Initialize Cloud Firestore and get a reference to the service
+        const db = firebase.firestore();
+
+      </script>
+
+</body>
+</html>
