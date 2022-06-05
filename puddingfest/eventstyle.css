@@ -189,12 +189,25 @@ nav button a{
 }
 
 /* TIMELINE */
-
 #timeline{
+    background-image: linear-gradient(rgba(0, 11, 26, 1), rgba(0, 0, 0, 1));
+    height: 120vh;
+}
+#timeline h1{
+    color: rgb(233, 245, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    padding-top: 70px;
+    text-align: center;
+}
+#timeline .container{
     width: 100%;
     max-width: 100%;
-    height: 110vh;
-    background-image: linear-gradient(#080432, rgba(0, 11, 26, 1));
+    height: 100vh;
+    background-image: url("/asset/Frame\ 4.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* FORM REGISTRASI */
